@@ -24,7 +24,7 @@
 			</p>
 
 			<button
-				class="px-6 py-2 bg-gray-600 text-white font-owners font-light tracking-wide flex items-center"
+				class="px-6 py-2 bg-gray-600/50 text-white font-owners font-light tracking-wide flex items-center"
 			>
 				<ChevronLeft size={25} strokeWidth={0.5} color="white" />
 				Watch full Video
