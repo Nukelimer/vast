@@ -33,7 +33,7 @@
 	];
 </script>
 
-<div class="bg-[#2A2C2F] py-14 md:pb-0 px-6 ">
+<div class="bg-[#2A2C2F] py-14 md:pb-0 px-6">
 	<div class="text-white md:flex justify-between mb-24 md:mb-12">
 		<h2 class="mb-8 text-3xl tracking-tight">Types of Missions</h2>
 
@@ -74,8 +74,7 @@
 
 	<div class="relative hidden md:flex gap-12 md:pb-0 w-full">
 		{#each missionDetails as data}
-			<div class="relative group flex justify-center items-center ">
-				<!-- Image -->
+			<div class="relative group flex justify-center items-center">
 				<h2 class="mt-12 mb-6 text-2xl font-semibold absolute text-white">{data.category}</h2>
 				<img
 					src={data.img}
@@ -83,27 +82,25 @@
 					class="md:aspect-square md:object-cover transition-transform duration-500"
 				/>
 
-				<!-- Icons -->
 				<div class="absolute inset-0 flex justify-between items-between pointer-events-none">
-					<!-- Top-Left Icon -->
 					<div
 						class="absolute top-0 left-0 transform translate-x-0 translate-y-0 opacity-0 group-hover:opacity-100 group-hover:-translate-x-full group-hover:-translate-y-full transition-transform duration-500"
 					>
 						<Plus size={25} strokeWidth={0.5} color="white" />
 					</div>
-					<!-- Top-Right Icon -->
+
 					<div
 						class="absolute top-0 right-0 transform translate-x-0 translate-y-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-full group-hover:-translate-y-full transition-transform duration-500"
 					>
 						<Plus size={25} strokeWidth={0.5} color="white" />
 					</div>
-					<!-- Bottom-Left Icon -->
+
 					<div
 						class="absolute bottom-0 left-0 transform translate-x-0 translate-y-0 opacity-0 group-hover:opacity-100 group-hover:-translate-x-full group-hover:translate-y-full transition-transform duration-500"
 					>
 						<Plus size={25} strokeWidth={0.5} color="white" />
 					</div>
-					<!-- Bottom-Right Icon -->
+
 					<div
 						class="absolute bottom-0 right-0 transform translate-x-0 translate-y-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-full group-hover:translate-y-full transition-transform duration-500"
 					>
@@ -111,7 +108,6 @@
 					</div>
 				</div>
 
-				<!-- Overlay Text and Content -->
 				<div
 					class="absolute inset-0 bg-white bg-opacity-100 text-white md:text-black flex flex-col justify-center px-6 pb-16 opacity-0 translate-y-full transition-all duration-700 group-hover:opacity-100 group-hover:translate-y-0 overflow-y-hidden"
 				>
