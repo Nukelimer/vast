@@ -35,7 +35,7 @@
 </script>
 
 <VanishingHeader>
-	<nav class="flex max-h-[3.75rem] justify-between w-full px-6 py-2 " style="background-color: {bgColor}">
+	<nav class="flex z-50 max-h-[3.75rem] justify-between w-full px-6 py-2 " style="background-color: {bgColor}">
 		<img src="/images/logo_vast.svg" alt="logo" class={invertColor} />
 
 		<div

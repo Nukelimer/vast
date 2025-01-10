@@ -21,7 +21,7 @@ let imageUrl = partnershipData[1][currentImageIndex];
 const intervalId = setInterval(() => {
     currentImageIndex = (currentImageIndex + 1) % partnershipData[1].length;
     imageUrl = partnershipData[1][currentImageIndex];
-}, 4000);
+}, 3000);
 
 
 onMount(() => {
@@ -36,9 +36,9 @@ onDestroy(() => {
 console.log(imageUrl);
 
 </script>
-<div class="pb-32 border-b border-zinc-700 bg-[#2A2C2F]">
-<div class="relative md:flex md:items-center px-6 md:h-fit  ">
-        <img src={imageUrl} alt="Looping Imagee" class="transition-shadow duration-300 h-full object-fill object-center mb-12 md:mb-0 " />
+<div class="pb-32 border-b pt-32 md:pt-6 border-zinc-700 bg-[#2A2C2F]">
+<div class="relative md:flex md:items-center px-6 md:w-full md:overflow-hidden  ">
+        <img src={imageUrl} alt="Looping Imagee" class="transition-shadow duration-300 object-cover md:w-full h-[400px] sm:h-[600px] w-full  md:max-h-[35rem] lg:md:h-[65em]  xl:md:max-h-[1000px] mb-12 md:mb-0 " />
 	<div class="text-white md:absolute z-10 md:left-10 md:w-[30%] md:h-[90%]   md:flex md:flex-col md:justify-between md:p-4 md:bg-opacity-100 md:backdrop-blur-3xl">
 		<h3 class="uppercase mb-10 text-xs font-semibold">{partnershipData[0].head}</h3>
 		<div class="">

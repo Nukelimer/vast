@@ -4,9 +4,12 @@
 	import Haven_2 from '../component/Haven_2.svelte';
 	import Hero from '../component/Hero.svelte';
 	import InProgress from '../component/InProgress.svelte';
+	import JoinUs from '../component/JoinUs.svelte';
+
 	import Partnership from '../component/Partnership.svelte';
 	import Showcase from '../component/Showcase.svelte';
 	import TypesOfMission from '../component/TypesOfMission.svelte';
+	import Updates from '../component/Updates.svelte';
 </script>
 
 <div class="">
@@ -18,4 +21,6 @@
 	<TypesOfMission/>
 	<Partnership/>
 	<InProgress/>
+	<Updates/>
+	<JoinUs/>
 </div>
