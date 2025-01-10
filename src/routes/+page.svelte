@@ -5,10 +5,11 @@
 	import Hero from '../component/Hero.svelte';
 	import InProgress from '../component/InProgress.svelte';
 	import JoinUs from '../component/JoinUs.svelte';
+	import KindOfMission from '../component/KindOfMission.svelte';
 	import Location from '../component/Location.svelte';
 	import Partnership from '../component/Partnership.svelte';
 	import Showcase from '../component/Showcase.svelte';
-	import TypesOfMission from '../component/TypesOfMission.svelte';
+
 	import Updates from '../component/Updates.svelte';
 </script>
 
@@ -18,7 +19,7 @@
 	<Haven_1/>
 	<Showcase/>
 	<Haven_2/>
-	<TypesOfMission/>
+	<KindOfMission/>
 	<Partnership/>
 	<InProgress/>
 	<Updates/>
