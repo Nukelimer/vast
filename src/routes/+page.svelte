@@ -5,6 +5,7 @@
 	import Hero from '../component/Hero.svelte';
 	import InProgress from '../component/InProgress.svelte';
 	import JoinUs from '../component/JoinUs.svelte';
+	import Location from '../component/Location.svelte';
 
 	import Partnership from '../component/Partnership.svelte';
 	import Showcase from '../component/Showcase.svelte';
@@ -23,4 +24,5 @@
 	<InProgress/>
 	<Updates/>
 	<JoinUs/>
+	<Location/>
 </div>
