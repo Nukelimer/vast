@@ -30,7 +30,79 @@
 		</div>
 	</div>
 
-	<div class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class=" text-white  mb-20 md:relative">
+		<img src="/images/location/Long_Beach.png" alt="{'headquater img'}" class="w-full bg-cover" />
+		<div class=" md:w-[96%]  md:flex md:flex-col lg:flex-row md:justif right-[16px]  md:absolute bottom-6    md:backdrop-blur-lg md:py-6">
+			<div class=""><h3 class="font-bold text-xl mt-8 mb-3 md:px-6 md:mt-0 uppercase">Headquarters</h3></div>
+<div class="md:flex item-center justify-center md:h-full  md:w-full ">
+
+	
+			<p class="w-2/3 md:mb-3 md:border-l border-zinc-400 md:w-1/3 mb-4 md:text-sm  max-w-[200px] md:pl-5  ">Design, Manufacturing, Integration, Mission Operations & Training</p>
+			<p class="w-1/3  md:mb-2 md:border-l border-zinc-400 md:w-1/3 md:text-sm  max-w-[200px] md:pl-5">2851 Orange Avenue  Long Beach, CA 90806</p>
+
+			<div class=" md:border-l border-zinc-400 md:w-1/3 md:text-sm  max-w-[250px] md:pl-5 md:">
+				<div class="flex items-center w-full">
+				<ChevronRight color="white" size="20" class='' />
+				<Button text={'Watch the flythrough video'} styles='text-nowrap' />
+			</div>
+			<a href={'https://maps.app.goo.gl/GHnYvx6THf8ysPceA'} class="flex items-center">
+				<ChevronRight color="white" size="20" />
+				<Button text={'Google Maps'} />
+			</a>
+			</div>
+</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="md:flex md:gap-8">
 		<LocationCard
 			img="/images/location/manufacturiing.png"
 			heading="Manufacturing"

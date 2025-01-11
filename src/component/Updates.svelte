@@ -28,7 +28,7 @@
 <div class=" bg-[#2A2C2F] px-6 pb-40 border border-zinc-700">
 	<h2 class="pt-20 pb-16 text-white text-3xl font-semibold">Updates</h2>
 
-	<div class="md:flex gap-6">
+	<div class="md:flex gap-6 item-center">
 		{#each data as x}
 			<UpdatesCard img={x.img} heading={x.heading} type={x.type} />
 		{/each}

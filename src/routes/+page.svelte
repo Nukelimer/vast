@@ -25,4 +25,5 @@
 	<Updates/>
 	<JoinUs/>
 	<Location/>
+	
 </div>

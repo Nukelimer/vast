@@ -19,7 +19,7 @@
 </script>
 
 <div class="gallery-container relative flex flex-col items-center w-full mx-auto">
-	<!-- Main Image -->
+	
 	<div class="relative w-full flex items-center justify-center">
 		<img
 			src={activeItem.image}

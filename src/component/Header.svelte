@@ -35,11 +35,11 @@
 </script>
 
 <VanishingHeader>
-	<nav class="flex z-50 max-h-[3.75rem] justify-between w-full px-6 py-2 " style="background-color: {bgColor}">
+	<nav class="flex z-50 max-h-[3.75rem] justify-between w-full px-12 py-4 " style="background-color: {bgColor}">
 		<img src="/images/logo_vast.svg" alt="logo" class={invertColor} />
 
 		<div
-			class="relative w-8 h-8 cursor-pointer flex flex-col justify-center items-center"
+			class="relative w-8 h-6 cursor-pointer flex flex-col justify-center items-center"
 			on:click={toggleMenu}
 			on:keydown={handleKeyDown}
 			tabindex="0"
