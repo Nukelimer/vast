@@ -2,6 +2,8 @@
 	let scrollY = 0;
 	let bgColor = 'transparent';
 	let bg_Color = 'white';
+	let lg_Bg_Color = 'white';
+	let text_White = 'black';
 	let invertColor = 'filter invert';
 	import { onMount } from 'svelte';
 	import VanishingHeader from './VanishingHeader.svelte';
@@ -22,7 +24,9 @@
 		scrollY = window.scrollY;
 		bgColor = scrollY > 100 ? 'white' : 'transparent';
 		bg_Color = scrollY > 100 ? 'black' : 'white';
+		lg_Bg_Color = scrollY > 100 ? 'black': 'white'
 		invertColor = scrollY > 100 ? '' : 'filter invert';
+		text_White = scrollY > 100 ?  'white' : ''
 	};
 
 	onMount(() => {
@@ -32,14 +36,23 @@
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
+
+	const navData = [
+
+	{name: "Haven-1", url: '/haven-1'},
+	{name: "Haven-2", url: '/haven-2'},
+	{name: "Roadmap", url: '/roadmap'},
+	{name: "About Us", url: '/about-us'}
+	]
 </script>
 
 <VanishingHeader>
-	<nav class="flex z-50 max-h-[3.75rem] justify-between w-full px-12 py-4 " style="background-color: {bgColor}">
+	<nav class="flex z-50 max-h-[3.75rem]  top-12  justify-between md:items-center w-full px-12 py-4 " style="background-color: {bgColor}">
 		<img src="/images/logo_vast.svg" alt="logo" class={invertColor} />
 
 		<div
-			class="relative w-8 h-6 cursor-pointer flex flex-col justify-center items-center"
+			class="relative md:hidden w-8 h-6 cursor-pointer flex flex-col justify-center items-center"
 			on:click={toggleMenu}
 			on:keydown={handleKeyDown}
 			tabindex="0"
@@ -60,5 +73,16 @@
 				style="background-color: {bg_Color}"
 			></span>
 		</div>
+
+
+		<div class="hidden md:flex justify-evenly w-full ">
+
+			{#each navData as  data}
+				<a href="{data.url}" class="text-{lg_Bg_Color}">{data.name}</a>
+			{/each}
+		</div>
+
+
+		<a href="/create-your-mission" class="hidden md:flex" ><button style="background-color: {bg_Color}" class="bg-white text-nowrap  py-2 px-6 text-{text_White}">Create your mission</button></a>
 	</nav>
 </VanishingHeader>

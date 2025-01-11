@@ -18,14 +18,13 @@
 	export let url =''
 	export let icon =''
 
-	console.log(productName);
 
 	const handleScroll = () => {
 		if (container) {
 			const rect = container.getBoundingClientRect();
 			const top = -rect.top;
 			const height = rect.height;
-			console.log({ scrollYAxis });
+
 
 			scrollYAxis = Math.min(Math.max(top, 0), height);
 		}
@@ -36,6 +35,7 @@
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			
 		};
 	});
 </script>
@@ -59,7 +59,7 @@
 	</div>
 
 	<div class=" relative z-10 w-full mx-auto flex flex-col justify-center items-center parent">
-		<!-- Background circle -->
+	
 		<img
 			src={parallaxImg}
 			alt="background circle"
@@ -68,7 +68,6 @@
 
 		<img src={img} alt={img} class="object-fill absolute top-20 " />
 
-		<!-- Parallax Image -->
 		<img
 			src={circleImg}
 			alt="background haven"

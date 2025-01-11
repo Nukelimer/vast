@@ -1,5 +1,5 @@
 <script>
-  export let duration = "600ms";
+  export let duration = "500ms";
   export let offset = 0;
   export let tolerance = 10;
 

@@ -4,13 +4,13 @@
 </script>
 
 <div class="">
-	<div class="relative -z-50 max-h-[80vh]">
+	<div class="relative -z-50 max-h- [80vh]">
 		<Video
 			src="/video/Homepage Header v2.mp4"
 			autoplay
 			loop
 			muted
-			class="w-full max-w-full h-[60vh] md:h-auto  pointer-events-none object-cover "
+			class="w-full max-w-full h-[60vh]  md:h-screen  pointer-events-none object-cover "
 			trackSrc="flowbite.mp4"
 		/>
 

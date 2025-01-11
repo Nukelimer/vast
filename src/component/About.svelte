@@ -11,9 +11,9 @@
 			color="white"
 		/>
 	</div>
-	<div class=" py-16 md:py-40 md:w-[70%]">
+	<div class=" py-16 md:py-28 md:w-[70%]">
 		<p
-			class="text-white text-2xl md:text-4xl font-owners text-pretty font-semibold text  mx-auto text-left"
+			class="text-white text-2xl md:text-4xl font -owners text-pretty font-semibold text  mx-auto text-left"
 		>
 			Vast is developing humanity’s most capable space stations, <span class="text-[#887F75]"
 				>pioneering the next giant leap toward long-term living and thriving in space.</span

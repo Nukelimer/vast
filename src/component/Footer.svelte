@@ -1,8 +1,13 @@
 <script>
 	import { Video } from 'flowbite-svelte';
-	import { Plus } from 'lucide-svelte';
+	import { Instagram, Linkedin, Plus, Twitter, Youtube } from 'lucide-svelte';
+	import Button from './reusable/Button.svelte';
 	let isScaled = false;
 	let isHovered = false;
+	let LinkedinIsHovered = false;
+	let YoutubeIsHovered = false;
+	let InstagramIsHovered = false;
+	let TwitterIsHovered = false;
 
 	function handleMouseEnter() {
 		isHovered = true;
@@ -23,69 +28,91 @@
 			name: 'Contact',
 			info: [
 				{
-					name: '2851 Orange Avenue Long Beach, CA 90806 USA',
+					name: `2851 Orange Avenue 
+                                        Long Beach, CA 90806 USA`,
 					link: 'https://maps.app.goo.gl/sMTDMq9nxzFLnZow5'
 				},
-                                {
+				{
 					name: '+1 (310) 220-0300',
 					link: 'tel:+13102200300'
 				},
-                                  {
+				{
 					name: 'info@vastspace.com',
 					link: 'mailto:info@vastspace.com'
 				}
 			]
 		},
 
-                {
+		{
 			name: 'Space Stations',
 			info: [
 				{
 					name: 'Haven-1',
 					link: '/haven-1'
 				},
-                                {
+				{
 					name: 'Haven-2',
 					link: '/haven-2'
 				},
-                                  {
+				{
 					name: 'Roadmap',
 					link: '/roadmap'
 				},
-                                 {
+				{
 					name: 'Haven-1 Lab',
 					link: '/haven-1-lab'
 				}
 			]
-		}
+		},
 
-                ,
-
-                {
+		{
 			name: 'About Vast',
 			info: [
 				{
 					name: 'Team',
 					link: '/team'
 				},
-                                {
+				{
 					name: 'Career',
 					link: '/career'
 				},
-                                  {
+				{
 					name: 'Updates',
 					link: '/updates'
 				},
-                                 {
+				{
 					name: 'Contact',
 					link: '/contact'
 				},
-                                ,
-                                 {
+				,
+				{
 					name: 'Media Assets',
 					link: '/media'
 				}
 			]
+		}
+	];
+
+	const navigationRoutes = [
+		{
+			name: 'Privacy Policy',
+			path: '/privacy-policy',
+			description: 'View our privacy policy'
+		},
+		{
+			name: 'Terms of Use',
+			path: '/terms-of-use',
+			description: 'Read our terms of use'
+		},
+		{
+			name: 'Media Assets Terms of Use',
+			path: '/media-assets-terms',
+			description: 'Terms for using media assets'
+		},
+		{
+			name: 'Suppliers',
+			path: '/suppliers',
+			description: 'Information for suppliers'
 		}
 	];
 </script>
@@ -97,7 +124,7 @@
 			autoplay
 			loop
 			muted
-			class="w-full max-w-full h-[60vh] md:h-auto  pointer-events-none object-cover brightness-50"
+			class="w-full max-w-full h-[60vh]  pointer-events-none object-cover brightness-50"
 			trackSrc="flowbite.mp4"
 		/>
 
@@ -188,9 +215,111 @@
 		</div>
 	</div>
 
-	<div class=" pt-32 pl-12 pb-16">
-		<img src="/images/footer/logo.svg" alt="logo" class="invert w-[65%]" />
+	<div class=" pt-32 px-6 pb-28">
+		<img
+			src="/images/footer/logo.svg"
+			alt="logo"
+			class="invert w-[65%] lg:w-full lg:mx-auto lg:max-w-[500px]"
+		/>
 	</div>
 
-	<div class=""></div>
+	<div class="px-6 lg:flex">
+		<div class=" lg:w-full flex">
+			<ul class="flex justify-between w-full flex-row-reverse lg:gap-0 lg:w-full">
+				{#each footerData as data}
+					<div class="fle lg:block w-full">
+						<h3 class="uppercase text-sm font-semibold text-nowrap mb-5">{data.name}</h3>
+
+						<li>
+							{#each data.info as dataX}
+								<a href={dataX?.link} class="hover:text-red-400">
+									<p class="my-4 max-w-[180px]">{dataX?.name}</p>
+								</a>
+							{/each}
+						</li>
+					</div>
+				{/each}
+			</ul>
+		</div>
+
+		<div class=" lg:w-1/2">
+			<label for="email">
+				<h3 class="text-sm uppercase font-semibold mb-5 mt-8 lg:mt-0">Sign Up for Updates</h3></label
+			>
+			<form class="flex items-center mb-5">
+				<div class="">
+					<input
+						type="email"
+						name=""
+						id="email"
+						required
+						class="min-w-1/2 w-[350px] max-w-[500px] border-none outline-none focus:border-none focus:outline-none ring-0 focus:ring-0 placeholder:text-zinc-400 py-3"
+						placeholder="Enter your email"
+					/>
+				</div>
+				<button class=" py-3 px-8 text-white bg-[#2A2C2F] text-nowrap">Sign Up</button>
+			</form>
+			<p class="w-1/2 md:w-2/3 font-medium text-sm">
+				By subscribing you agree to our <span class="border-b border-black"> Privacy Policy</span> and
+				provide consent to receive updates from Vast.
+			</p>
+		</div>
+	</div>
+
+	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between">
+		<div
+			class=" flex w-full lg:w-1/3 gap-7 md:justify- between mx-6 
+                "
+		>
+			{#each navigationRoutes as data}
+				<a href={data.path} class="hover:text-red-400">
+					<p class="my-4 max-w-[180px] font-semibold text-nowrap text-[10px] uppercase">{data.name}</p>
+				</a>
+			{/each}
+		</div>
+
+		<div class="flex ml-6 lg:ml-0 items-center w-full lg:justify-evenly lg:w-1/3">
+			<div class=" flex lg:w-1/2 gap-7 lg:justify-between mr-8 ">
+				<div
+					class=""
+					on:mouseenter={() => {
+						LinkedinIsHovered = true;
+					}}
+					on:mouseleave={() => {
+						LinkedinIsHovered = false;
+					}}
+				>
+					<Linkedin color={`${LinkedinIsHovered ? 'red' : 'black'}`}  size={13}/>
+				</div>
+				<div class="" on:mouseenter={() => {
+						InstagramIsHovered = true;
+					}}
+					on:mouseleave={() => {
+						InstagramIsHovered = false;
+					}}>
+					<Instagram color={`${InstagramIsHovered ? 'red' : 'black'}`} size={13}/>
+				</div>
+				<div class="" on:mouseenter={() => {
+						YoutubeIsHovered = true;
+					}}
+					on:mouseleave={() => {
+						YoutubeIsHovered = false;
+					}}>
+					<Youtube color={`${YoutubeIsHovered ? 'red' : 'black'}`}  size={13}/>
+				</div>
+				<div class="" on:mouseenter={() => {
+						TwitterIsHovered = true;
+					}}
+					on:mouseleave={() => {
+						TwitterIsHovered = false;
+					}} >
+					<Twitter color={`${TwitterIsHovered ? 'red' : 'black'}`}  size={13}/>
+				</div>
+
+				
+			</div>
+
+			<p class="text-xs text-nowrap mr-6">© 2025 VAST SPACE LLC. All rights reserved.</p>
+		</div>
+	</div>
 </footer>
