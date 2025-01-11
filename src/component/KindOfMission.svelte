@@ -75,7 +75,7 @@
 	<div class="relative hidden md:flex gap-12 md:pb-0 w-full">
 		{#each missionDetails as data}
 			<div class="relative group flex justify-center items-center">
-				<h2 class="mt-12 mb-6 text-2xl font-semibold absolute text-white">{data.category}</h2>
+				<h2 class="mt-12 mb-6 px-2 text-center text-xl font-semibold absolute text-white">{data.category}</h2>
 				<img
 					src={data.img}
 					alt={data.category}
@@ -111,12 +111,12 @@
 				<div
 					class="absolute inset-0 bg-white bg-opacity-100 text-white md:text-black flex flex-col justify-center px-6 pb-16 opacity-0 translate-y-full transition-all duration-700 group-hover:opacity-100 group-hover:translate-y-0 overflow-y-hidden"
 				>
-					<h2 class="mt-12 mb-6 text-2xl font-semibold">{data.category}</h2>
-					<div class="flex flex-col space-y-2">
+					<h2 class="mt-12 mb-3 text-xl font-semibold">{data.category}</h2>
+					<div class="flex flex-col space-y-1">
 						{#each data.points as point}
 							<div class="flex md:text-black items-start md:items-center space-x-2">
 								<span class="block w-[6px] h-[6px] min-w-[6px] bg-white md:bg-black"></span>
-								<span class="text-base md:text-black text-gray-200">{point}</span>
+								<span class="text-xs md:text-black text-gray-200">{point}</span>
 							</div>
 						{/each}
 					</div>
