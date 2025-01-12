@@ -117,14 +117,14 @@
 	];
 </script>
 
-<footer class=" bg-[#ECE8E3]">
-	<div class="relative max-h-[70vh]">
+<footer class=" bg-[#ECE8E3]  md:px -6 ">
+	<div class="relative flex justify-center min-h-[80vh]">
 		<Video
 			src="/video/flux-vast.mp4"
 			autoplay
 			loop
 			muted
-			class="w-full max-w-full h-[60vh]  pointer-events-none object-cover brightness-50"
+			class="w-full max-w-full h-full min-h-[80vh]  pointer-events-none object-cover brightness-50"
 			trackSrc="flowbite.mp4"
 		/>
 
@@ -160,7 +160,7 @@
 			</div>
 		</div>
 
-		<div class="w-full flex justify-around absolute top-28">
+		<div class="w-full flex justify-around absolute top-6 lg:top-28">
 			<Plus
 				size={`${isScaled ? 30 : 25}`}
 				strokeWidth={0.5}
@@ -180,10 +180,10 @@
 					: '0px'}); "
 			/>
 		</div>
-		<div class="absolute top-32 text-white w-full">
+		<div class="absolute  bottom-[35%] text-white w-fit">
 			<div class="flex flex-col max-w-md mx-auto my-4 relative">
-				<h3 class="text-4xl font-semibold mb-4 text-center">Join Our Team</h3>
-				<p class="text-center leading-5 py-4 text-base text-pretty">
+				<h3 class=" text-3xl lg:text-4xl font-semibold mb-4 text-center">Join Our Team</h3>
+				<p class="text-center leading-5 py-4 text-sm md:text-base text-pretty">
 					Join the only space station company fully funded to design, manufacture, launch, and visit
 					the world's first commercial space station.
 				</p>
@@ -197,7 +197,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="w-full flex justify-around absolute bottom-28">
+		<div class="w-full flex justify-around absolute bottom-6 lg:bottom-28">
 			<Plus
 				size={`${isScaled ? 30 : 25}`}
 				strokeWidth={0.5}
@@ -215,7 +215,7 @@
 		</div>
 	</div>
 
-	<div class=" pt-32 px-6 pb-28">
+	<div class=" mt-32 px-6 pb-28">
 		<img
 			src="/images/footer/logo.svg"
 			alt="logo"
@@ -225,10 +225,10 @@
 
 	<div class="px-6 lg:flex">
 		<div class=" lg:w-full flex">
-			<ul class="flex justify-between w-full flex-row-reverse lg:gap-0 lg:w-full">
+			<ul class="flex flex-col gap-24 lg:justify-between w-full md:flex-row-reverse lg:gap-0 lg:w-full">
 				{#each footerData as data}
 					<div class="fle lg:block w-full">
-						<h3 class="uppercase text-sm font-semibold text-nowrap mb-5">{data.name}</h3>
+						<h3 class="uppercase text-sm  font-bold md:font-semibold text-nowrap mb-5">{data.name}</h3>
 
 						<li>
 							{#each data.info as dataX}
@@ -246,40 +246,32 @@
 			<label for="email">
 				<h3 class="text-sm uppercase font-semibold mb-5 mt-8 lg:mt-0">Sign Up for Updates</h3></label
 			>
-			<form class="flex items-center mb-5">
+			<form class="flex flex-col md:flex-row md:items-center mb-5">
 				<div class="">
 					<input
 						type="email"
 						name=""
 						id="email"
 						required
-						class="min-w-1/2 w-[350px] max-w-[500px] border-none outline-none focus:border-none focus:outline-none ring-0 focus:ring-0 placeholder:text-zinc-400 py-3"
+						class="min-w-1/2 w-full mb-4 md:mb-0 md:w-[350px] md:max-w-[500px] border-none outline-none focus:border-none focus:outline-none ring-0 focus:ring-0 placeholder:text-zinc-400 py-3"
 						placeholder="Enter your email"
 					/>
 				</div>
 				<button class=" py-3 px-8 text-white bg-[#2A2C2F] text-nowrap">Sign Up</button>
 			</form>
-			<p class="w-1/2 md:w-2/3 font-medium text-sm">
+			<p class=" text-2xl md:w-2/3 font-medium md:text-sm">
 				By subscribing you agree to our <span class="border-b border-black"> Privacy Policy</span> and
 				provide consent to receive updates from Vast.
 			</p>
 		</div>
 	</div>
 
-	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between">
-		<div
-			class=" flex w-full lg:w-1/3 gap-7 md:justify- between mx-6 
-                "
-		>
-			{#each navigationRoutes as data}
-				<a href={data.path} class="hover:text-red-400">
-					<p class="my-4 max-w-[180px] font-semibold text-nowrap text-[10px] uppercase">{data.name}</p>
-				</a>
-			{/each}
-		</div>
+	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between ">
+		
 
-		<div class="flex ml-6 lg:ml-0 items-center w-full lg:justify-evenly lg:w-1/3">
-			<div class=" flex lg:w-1/2 gap-7 lg:justify-between mr-8 ">
+		<div class=" mb-6 md:mb-0 flex ml-6 lg:ml-0 flex-col md:flex-row md:items-center w-full lg:justify-evenly lg:w-1/3">
+			<div class=" flex lg:w-1/2 gap-7 lg:justify-between mr-8 lg:pl-6 ">
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div
 					class=""
 					on:mouseenter={() => {
@@ -291,6 +283,7 @@
 				>
 					<Linkedin color={`${LinkedinIsHovered ? 'red' : 'black'}`}  size={13}/>
 				</div>
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="" on:mouseenter={() => {
 						InstagramIsHovered = true;
 					}}
@@ -299,6 +292,7 @@
 					}}>
 					<Instagram color={`${InstagramIsHovered ? 'red' : 'black'}`} size={13}/>
 				</div>
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="" on:mouseenter={() => {
 						YoutubeIsHovered = true;
 					}}
@@ -307,6 +301,7 @@
 					}}>
 					<Youtube color={`${YoutubeIsHovered ? 'red' : 'black'}`}  size={13}/>
 				</div>
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="" on:mouseenter={() => {
 						TwitterIsHovered = true;
 					}}
@@ -319,7 +314,18 @@
 				
 			</div>
 
-			<p class="text-xs text-nowrap mr-6">© 2025 VAST SPACE LLC. All rights reserved.</p>
+			<p class="text-xs text-nowrap mr-6 mt-6 md:mt-0">© 2025 VAST SPACE LLC. All rights reserved.</p>
+		</div>
+
+                <div
+			class="  flex w-1/2 flex-wrap md:flex-nowrap  lg:w-1/2 lg:justify-end  gap-2 md:gap-7 md:justify- between mx-6 
+                "
+		>
+			{#each navigationRoutes as data}
+				<a href={data.path} class="hover:text-red-400">
+					<p class=" md:my-4 max-w-[180px] font-semibold text-nowrap text-[10px] uppercase">{data.name}</p>
+				</a>
+			{/each}
 		</div>
 	</div>
 </footer>

@@ -78,10 +78,12 @@ let isHovered = false;
 		class="flex z-50 max-h-[3.75rem] top-12 justify-between md:items-center w-full px-6 py-4"
 		style="background-color: {bgColor}"
 	>
-		<img src="/images/logo_vast.svg" alt="logo" class={invertColor} />
+		<a href="/">
+			<img src="/images/logo_vast.svg" alt="logo" class={invertColor} />
+		</a>
 
 		<div
-			class="relative md:hidden w-8 h-6 cursor-pointer flex flex-col justify-center items-center"
+			class="relative lg:hidden w-8 h-6 cursor-pointer flex flex-col justify-center items-center"
 			on:click={toggleMenu}
 			on:keydown={handleKeyDown}
 			tabindex="0"
@@ -103,7 +105,7 @@ let isHovered = false;
 			></span>
 		</div>
 
-		<div class="hidden md:flex justify-evenly w-full">
+		<div class="hidden lg:flex justify-evenly w-full">
 			{#each navData as data}
 				{#if data.name === 'About Us'}
 					<a
@@ -132,7 +134,7 @@ let isHovered = false;
 		</div>
 	
 
-		<a href="/create-your-mission" class="hidden md:flex"
+		<a href="/create-your-mission" class="hidden lg:flex"
 			><button
 				style="background-color: {bg_Color}"
 				class="bg-white text-nowrap py-2 px-6 text-{text_White}">Create your mission</button
