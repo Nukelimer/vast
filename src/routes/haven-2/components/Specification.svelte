@@ -136,7 +136,7 @@ const galleryItems = [
  ]
 </script>
 
-<div class="bg-[#2A2C2F] py-28 w-full px-1">
+<div class="bg-[#2A2C2F] py-28 pb-0 w-full px-1  h-fit">
 	<div class="flex justify-between">
 		<h2 class="text-4xl font-semibold flex flex-col">
 			<span class="text-white">Haven-2 </span>
@@ -210,7 +210,7 @@ const galleryItems = [
 	</div>
 
 
-	<div class="">
+	<div class="mt-16">
 
 <ThumbnailGallery items={galleryItems} styles_thumbanail='!top-2 md:!top-6' styles_thumbanail_size='w-20 md:w-[76px] md:h-[42px] min-h-[42px] min-w-[76px]'/>
 

@@ -7,7 +7,7 @@
 
 
 
-<Header/>
+
 {@render children()}
 
 <Footer/>

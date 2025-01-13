@@ -19,7 +19,7 @@
 			rotation = (scrollYAxis / height) * maxRotation;
                         Ymove = scrollYAxis /height
 		}
-                 console.log(scrollYAxis);
+               
 		
 	};
 
