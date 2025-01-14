@@ -1,6 +1,6 @@
 <script>
 
-	import ProductHero from "../../component/reusable/ProductHero.svelte";
+	
 	import About from "./components/About.svelte";
 	import Configuration from "./components/Configuration.svelte";
 	import Hero from "./components/Hero.svelte";

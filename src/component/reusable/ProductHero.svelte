@@ -13,7 +13,7 @@
 	export let whitetext = '';
 </script>
 
-<section class="mt-60  justify-center items-center flex flex-col w-full  mb-16">
+<section class="mt-60 justify-center items-center flex flex-col w-full mb-16">
 	<div class="flex flex-col md:flex-row mx-4 mb-12 justify-between">
 		<img src={img} alt="product img" class="w-[90%] md:w-[50%] md:h-fit my-auto max-w-[1200px]" />
 
@@ -32,7 +32,7 @@
 			{/if}
 		</div>
 	</div>
-	<div class="flex justify-center mx-auto flex-col relative w-full  md:w-full">
+	<div class="flex justify-center mx-auto flex-col relative w-full md:w-full">
 		<Video
 			src={video_url}
 			autoplay
@@ -43,7 +43,7 @@
 		/>
 
 		{#if blacktext}
-			<div class=" flex justify-between md:w-[96%] mx-auto max-w-full w-full mt-5 mb-12 ">
+			<div class=" flex justify-between md:w-[96%] mx-auto max-w-full w-full mt-5 mb-12">
 				<Plus size={35} strokeWidth={0.5} color="black" />
 
 				<Plus size={35} strokeWidth={0.5} color="black" />
@@ -64,17 +64,11 @@
 		{#if whitetext}
 			<p><span>{whitetext}</span> <span>{darktext}</span></p>
 		{:else if blacktext}
-			<p class="text-[1.7em] flex flex-col mx-10 md:mx-20 font-semibold leading-9 tracking-tight w-[80%] lg:text-[3.5rem] lg:leading-[3.2rem] lg:pr-60 ">
+			<p
+				class="text-[1.7em] flex flex-col mx-10 md:mx-20 font-semibold leading-9 tracking-tight w-[80%] lg:text-[3.5rem] lg:leading-[3.2rem] lg:pr-60"
+			>
 				<span class="text-black">{blacktext}</span> <span class="text-[#B3ABA3]">{darktext}</span>
 			</p>
 		{/if}
 	</div>
-
-
-
-
-
-
-
-	
 </section>

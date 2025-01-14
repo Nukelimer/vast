@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import ProductHero from '../../../component/reusable/ProductHero.svelte';
+	import ProductHero from '../../../../component/reusable/ProductHero.svelte';
+	
 	const attributesData = ['Safe', 'On time', 'Reliable', 'Cost effective', 'Capable', 'Versatile'];
 
 	let container;
