@@ -1,14 +1,12 @@
 <script>
 	import '../../app.css';
-	
+
 	import Header from '../../component/Header.svelte';
-	import Footer from './footer/Footer.svelte';
+	import Footer from './haven-1/components/Footer.svelte';
 	let { children } = $props();
 </script>
 
-
-
-<Header/>
+<Header />
 {@render children()}
 
-<Footer/>
+<Footer />

@@ -117,7 +117,7 @@
 	];
 </script>
 
-<footer class=" bg-[#ECE8E3]  md:px -6 ">
+<footer class=" bg-[#ECE8E3] overflow-x-hidden md:px -6 ">
 	<div class="relative flex justify-center min-h-[80vh]">
 		<Video
 			src="/video/flux-vast.mp4"

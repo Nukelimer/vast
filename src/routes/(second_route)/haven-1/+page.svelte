@@ -1,6 +1,8 @@
 <script>
 
 	import ProductHero from "../../../component/reusable/ProductHero.svelte";
+	import Interior from "./components/Interior.svelte";
+	import StackedCard from "./components/StackedCard.svelte";
 
 </script>
 <div class="pt-12 bg-[#B3ABA3]">
@@ -17,5 +19,14 @@
                 create_your_mission={true}
 
         />
+
+        <StackedCard/>
+        <Interior/>
         
 </div>
+
+
+<style>
+
+     
+</style>

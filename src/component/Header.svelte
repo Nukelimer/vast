@@ -75,7 +75,7 @@ let isHovered = false;
 
 <VanishingHeader>
 	<nav
-		class="flex z-50 max-h-[3.75rem] top-12 justify-between md:items-center w-full px-6 py-4"
+		class="flex z-50 max-h-[3.75rem] top-12 justify-between md:items-center w-full px-6 py-4 overflow-hidden"
 		style="background-color: {bgColor}"
 	>
 		<a href="/">
