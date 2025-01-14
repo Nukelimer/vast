@@ -2,7 +2,7 @@
 	import '../../app.css';
 	
 	import Header from '../../component/Header.svelte';
-	import Footer from './component/Footer.svelte';
+	import Footer from './footer/Footer.svelte';
 	let { children } = $props();
 </script>
 

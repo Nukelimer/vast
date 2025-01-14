@@ -14,11 +14,9 @@
 			trackSrc="flowbite.mp4"
 		/>
 
-              
-
 		<div class="absolute !bottom-6 md:bottom-40 px-4">
 			<p
-				class="text-3xl sm:text-6xl md:text-6xl  xl:text-7xl text-white font-semibold w-[60%] md:w-[60%] tracking-tight mb-20"
+				class="text-3xl sm:text-6xl md:text-6xl xl:text-7xl text-white font-semibold w-[60%] md:w-[60%] tracking-tight mb-20"
 			>
 				Building next-generation space stations
 			</p>

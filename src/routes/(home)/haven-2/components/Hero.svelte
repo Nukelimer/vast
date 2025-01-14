@@ -45,6 +45,7 @@
                 btn_text="Watch full video"
                 blacktext="Haven-2 is poised to succeed the International Space Station—"
                 darktext="introducing groundbreaking opportunities to expand progress on Earth and shape the future of life in space."
+                hideIcon= 'true'
         />
         <div class="flex md:justify-evenly relative  min-w-[380px] ">
                 <div class="mx-10 md:mx-16  my-auto w-1/3 md:w-1/3 ">

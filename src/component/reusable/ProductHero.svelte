@@ -6,29 +6,38 @@
 	export let text = '';
 	export let btn_text = '';
 	export let video_url = '';
-	export let create_your_mission = '';
+	export let create_your_mission = false;
 	export let create_mission_text = '';
 	export let blacktext = '';
 	export let darktext = '';
 	export let whitetext = '';
+	export let hideIcon = '';
+	
+
 </script>
 
-<section class="mt-60 justify-center items-center flex flex-col w-full mb-16">
+<section class="mt-60 justify-center items-center flex flex-col w-full pb-16">
 	<div class="flex flex-col md:flex-row mx-4 mb-12 justify-between">
 		<img src={img} alt="product img" class="w-[90%] md:w-[50%] md:h-fit my-auto max-w-[1200px]" />
 
-		<div class=" md:w-[40%] flex items-end lg:justify-end">
+		<div class=" md:w-[40%] flex flex-col  lg:items-end lg:justify-end">
 			<h2
-				class="text-3xl max-w-[440px] font-semibold mt-6 md:text-3xl lg:text-3xl md:justify-self-end w-full"
+				class="text-3xl text-white max-w-[440px] font-semibold mt-6 md:text-3xl lg:text-3xl md:justify-self-end w-full"
 			>
 				{text}
 			</h2>
 
 			{#if create_your_mission}
-				<button class="px-6 py-2 text-white font-owners font-light tracking-wide flex items-center">
+			<div class=" place-self-start mr-auto   lg:w-full">
+
+				<a href="/create-your-mission">
+					
+				<button class=" py-2 mt-4 md:mx-auto text-white text-lg font-semibold tracking-wide flex items-center">
 					<ChevronRight size={25} strokeWidth={0.5} color="white" />
 					{create_mission_text}
 				</button>
+				</a>
+			</div>
 			{/if}
 		</div>
 	</div>
@@ -42,7 +51,7 @@
 			trackSrc="flowbite.mp4"
 		/>
 
-		{#if blacktext}
+		{#if hideIcon}
 			<div class=" flex justify-between md:w-[96%] mx-auto max-w-full w-full mt-5 mb-12">
 				<Plus size={35} strokeWidth={0.5} color="black" />
 
@@ -62,7 +71,7 @@
 
 	<div class="">
 		{#if whitetext}
-			<p><span>{whitetext}</span> <span>{darktext}</span></p>
+			<p class="text-[1.7em] mt-12 flex flex-col mx-10 md:mx-20 font-semibold leading-9 tracking-tight w-[80%] lg:text-[2.7rem] lg:leading-[3.2rem] lg:pr-60"><span class="text-white">{whitetext}</span> <span class="text-[#887F75]">{darktext}</span></p>
 		{:else if blacktext}
 			<p
 				class="text-[1.7em] flex flex-col mx-10 md:mx-20 font-semibold leading-9 tracking-tight w-[80%] lg:text-[3.5rem] lg:leading-[3.2rem] lg:pr-60"
