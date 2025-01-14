@@ -28,8 +28,7 @@ onMount(() => {
 
 })
 
-onDestroy(() => {
-    // Clear the interval when the component unmounts
+onDestroy(() => { 
     clearInterval(intervalId);
 });
 
