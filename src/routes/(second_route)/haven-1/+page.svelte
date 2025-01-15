@@ -1,7 +1,14 @@
 <script>
 
+
+	import KindOfMission from "../../../component/KindOfMission.svelte";
+	import Partnership from "../../../component/Partnership.svelte";
+
+
 	import ProductHero from "../../../component/reusable/ProductHero.svelte";
+	import DevelopmentProcess from "./components/DevelopmentProcess.svelte";
 	import Interior from "./components/Interior.svelte";
+	import MissionTimeline from "./components/MissionTimeline.svelte";
 	import StackedCard from "./components/StackedCard.svelte";
 
 </script>
@@ -22,6 +29,14 @@
 
         <StackedCard/>
         <Interior/>
+
+
+        <DevelopmentProcess/>
+
+        <MissionTimeline/>
+        <KindOfMission color={'bg-white'} bg={'!text-black'} bg_card='!bg-[#B3ABA3] !text-white' isCheckingForLargeScreen={true} color_overide='!bg-[#ECE8E3]'/>
+
+        <Partnership overideStyles='mx-6 mx-0 pt-0 !bg-[#ECE8E3]' img_styles='' overidePadding="!px-0" addPadding='px-6 bg-[#2A2C2F]'/>
         
 </div>
 

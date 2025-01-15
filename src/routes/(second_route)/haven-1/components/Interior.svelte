@@ -64,21 +64,21 @@
 
 
         <div class="md:flex flex-col hidden">
-		<div class=" px-4">
-			<div class="">
+		<div class=" px-4 flex gap-12 my-40">
+			<div class=" flex-1 flex justify- flex-col ">
 
-                                <h3 class=' text-4xl font-semibold my-12 w-1/3 '>Haven-1 Specifications</h3>
+                                <h3 class=' text-6xl font-semibold w-1/2  '>Haven-1 Specifications</h3>
 
-                                <img src="" alt="">
+                                <img src="/images/haven_1/Straight Front.png" alt="Spec" class="my-auto">
                         </div>
 
-			<div class="">
+			<div class="flex-1">
 				<ul class="w-full ">
 					{#each specData as data}
 						<div class="border-t border-white py-4">
 
                                                         <h3 class="uppercase text-[#FA5530] font-semibold text-sm">{data.name}</h3>
-						<h4 class="font-bold mt-2 text-3xl">{data.value}</h4>
+						<h4 class="font-bold mt-2 text-3xl md:text-5xl">{data.value}</h4>
                                                 </div>
 					{/each}
 				</ul>
