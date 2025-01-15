@@ -16,8 +16,9 @@
 	export let img = '';
 	export let additionalStyles = '';
 	export let url =''
-	export let icon =''
-
+	export let icon =''	
+	export let hideIcon =''
+export let styleOveride =''
 
 	const handleScroll = () => {
 		if (container) {
@@ -63,7 +64,7 @@
 		<img
 			src={parallaxImg}
 			alt="background circle"
-			class="select-none mx-auto max-w-[550px] md:max-w-[650px] w-full -translate-y-20 object-cover"
+			class="select-none mx-auto max-w-[550px] md:max-w-[650px] w-full  -translate-y-20 object-cover"
 		/>
 
 		<img src={img} alt={img} class="object-fill absolute top-20 " />
@@ -71,12 +72,12 @@
 		<img
 			src={circleImg}
 			alt="background haven"
-			class="select-none hi dden mx-auto max-w-[300px] ml-1 md:max-w-[450px] w-full !object-scale-down absolute -top-[1%] md:top-14 img"
+			class="select-none  mx-auto max-w-[300px] ml-1 md:max-w-[450px] w-full object-scale-down absolute -top-[1%] md:top-14 img {styleOveride}"
 			style="transform: translateY(-{scrollYAxis * 0.5}px);"
 		/>
 	</div>
 
-	<div class="max-w-[300px]  md:max-w-[245px] -translate-y-12 hid den ml-4">
+	<div class="max-w-[300px]  md:max-w-[245px] -translate-y-12 hid den ml-4 {hideIcon}">
 		<h2 class="text-3xl leading-7 font-semibold mb-2">{aboutIt}</h2>
 		<a href="{url}">
 			<span class="flex items-center cursor-pointer">{#if icon ==='left'}

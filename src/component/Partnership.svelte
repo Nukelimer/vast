@@ -31,6 +31,7 @@
 	export let overideStyles = '';
         export let overidePadding = '';
         export let addPadding = '';
+           export let rmvPadding = '';
 </script>
 
 <div class="pb-32 border-b pt-32 md:pt-6 border-zinc-700 bg-[#2A2C2F] {overideStyles}">
@@ -38,7 +39,7 @@
 		<img
 			src={imageUrl}
 			alt="Looping Imagee"
-			class="transition-shadow duration-300 object-cover md:w-full h-[400px] sm:h-[600px] w-full md:max-h-[35rem] lg:md:h-[65em] xl:md:max-h-[1000px] mb-12 md:mb-0"
+			class="transition-shadow duration-300 object-cover md:w-full h-[400px] sm:h-[600px] w-full md:max-h-[35rem] lg:md:h-[65em] xl:md:max-h-[1000px] mb-12 md:mb-0 {rmvPadding}"
 		/>
 		<div
 			class="text-white md:absolute z-10 md:left-10 md:w-[30%] md:h-[90%] md:flex md:flex-col md:justify-between md:p-4 md:bg-opacity-100 md:backdrop-blur-3xl {addPadding}"
