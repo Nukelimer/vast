@@ -118,13 +118,13 @@
 </script>
 
 <footer class=" bg-[#ECE8E3]  md:px -6 ">
-	<div class="relative flex justify-center min-h-[80vh]">
+	<div class="relative flex justify-center min-h-[40vh]">
 		<Video
 			src="/video/flux-vast.mp4"
 			autoplay
 			loop
 			muted
-			class="w-full max-w-full h-full min-h-[80vh]  pointer-events-none object-cover brightness-50"
+			class="w-full max-w-full h-full min-h-[40vh]  pointer-events-none object-cover brightness-50"
 			trackSrc="flowbite.mp4"
 		/>
 
