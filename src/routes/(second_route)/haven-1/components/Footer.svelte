@@ -262,7 +262,7 @@
 	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between ">
 		
 
-		<div class=" mb-6 md:mb-0 flex ml-6 lg:ml-0 flex-col md:flex-row md:items-center w-full lg:justify-evenly lg:w-1/3">
+		<div class="mb-6 px-6 md:mb-0 flex lg:ml-0 flex-col md:flex-row md:items-center w-full lg:justify-evenly lg:w-1/3">
 			<div class=" flex lg:w-1/2 gap-7 lg:justify-between mr-8 lg:pl-6 ">
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div

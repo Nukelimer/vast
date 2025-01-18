@@ -117,7 +117,7 @@
 	];
 </script>
 
-<footer class=" bg-[#ECE8E3]  md:px -6 ">
+<footer class=" bg-[#ECE8E3]  md:px -6 max-w-full ">
 	<div class="relative flex justify-center min-h-[40vh]">
 		<Video
 			src="/video/flux-vast.mp4"
@@ -266,10 +266,10 @@
 		</div>
 	</div>
 
-	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between ">
+	<div class=" flex mt-12 items-start lg:items-center flex-col lg:flex-row lg:justify-between overflow-x-hidden">
 		
 
-		<div class=" mb-6 md:mb-0 flex ml-6 lg:ml-0 flex-col md:flex-row md:items-center w-full lg:justify-evenly lg:w-1/3">
+		<div class=" mb-6 px-6 md:mb-0 flex lg:ml-0 flex-col md:flex-row md:items-center w-full lg:justify-evenly lg:w-1/3">
 			<div class=" flex lg:w-1/2 gap-7 lg:justify-between mr-8 lg:pl-6 ">
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div
