@@ -41,7 +41,7 @@
 		<div>Page Not Found</div>
 
 	</div>
-  <a href="/home"><p class="pt-6 !text-white">Go back home</p> </a>
+  <a href="/"><p class="pt-6 !text-white">Go back home</p> </a>
 
 	<div class="astronaut">
 		<img

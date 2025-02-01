@@ -32,6 +32,9 @@
         isOpen = !isOpen;
     };
 
+    $:console.log(isOpen);
+    
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
             toggleMenu();
@@ -175,7 +178,7 @@
 {/if}
 
 {#if isOpen}
-    <div class="h-[calc(100vh-50px)] lg:hidden my-auto flex flex-col  fixed bottom-0 w-screen overflow-hidden bg-white !z-[5000]">
+    <div class="h-[calc(100vh)] lg:hidden my-auto flex flex-col  fixed bottom -0 w-screen overflow-hidden bg-white !z-[5000]">
     
 
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -183,7 +186,19 @@
 	<div class="px-6 mt-6 h-full flex flex-col" on:click={toggleMenu}>
  <nav class="flex flex-col text-5xl gap-8 font-semibold ">
     {#each navLinks as link}
-      <a href={link.url} class="hover:underline cursor-pointer text-black">{link.name}</a>
+      {#if link.name === 'Haven-1'}
+       <div class="flex  items-center justify-between">
+         <a href={link.url} class="hover:underline text-gray-700">{link.name} </a>
+         <span class="text-gray-700"  on:click|stopPropagation={toggleMenu}
+           
+            tabindex="0"
+            role="button"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}><X size='40' /> </span>
+       </div>
+      {:else}
+        <a href={link.url} class="hover:underline text-gray-700">{link.name}</a>
+      {/if}
     {/each}
   </nav>
   <div class="mt-10 flex flex-col gap-8 text-xl font-semibold">
